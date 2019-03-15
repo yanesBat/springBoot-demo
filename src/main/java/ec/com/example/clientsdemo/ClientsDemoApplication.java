@@ -29,8 +29,7 @@ public class ClientsDemoApplication {
 			InputStream inputStream = TypeReference.class.getResourceAsStream("/static/json/test.json");
 			try {
 				List<Client> clientsData = mapper.readValue(inputStream,typeReference);
-				List<Client> clients = new ArrayList<>();
-				clients.addAll(clientsData);
+				List<Client> clients = new ArrayList<>(clientsData);
 
 				for (int i = 0; i < 400000; i++) {
 					Random rand = new Random();

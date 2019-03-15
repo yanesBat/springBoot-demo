@@ -38,7 +38,7 @@ public class ClientController {
         }
 
         return clientRepository.findAll(booleanBuilder.getValue(),
-                PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "name")));
+                PageRequest.of(page, size, Sort.by(Sort.Direction.ASC, "id")));
 
     }
 
